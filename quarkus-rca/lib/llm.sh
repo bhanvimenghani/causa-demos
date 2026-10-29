@@ -333,6 +333,8 @@ elif provider == "bob":
     body["auth_config"] = auth
     if bob_path:
         body["additional_config"] = {"bobShellPath": bob_path}
+    if not body.get("models"):
+        body["models"] = [model if model else "bob"]
 
 print(json.dumps(body))
 PYEOF
