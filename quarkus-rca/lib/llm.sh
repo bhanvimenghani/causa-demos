@@ -213,7 +213,7 @@ create_llm_secrets() {
 #     auth_config: { authType: API_KEY, apiKey: <LLM_API_KEY> }
 #
 #   bob  (→ provider path: BOB):
-#     is_active=true,
+#     models (defaults to ["bob"]), is_active=true,
 #     auth_config: { authType: API_KEY, apiKey: <LLM_API_KEY> }    (when set)
 #     additional_config: { bobShellPath: <BOB_SHELL_PATH> }         (when set)
 #
@@ -333,6 +333,8 @@ elif provider == "bob":
     body["auth_config"] = auth
     if bob_path:
         body["additional_config"] = {"bobShellPath": bob_path}
+    if not body.get("models"):
+        body["models"] = [model if model else "bob"]
 
 print(json.dumps(body))
 PYEOF
