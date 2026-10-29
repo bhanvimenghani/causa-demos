@@ -55,7 +55,7 @@ LLM_API_KEY=<your-api-key>
 
 ## Provider: `bob`
 
-Uses IBM Bob as the backend RCA LLM. `LLM_API_KEY` is required when Bob is configured with API key authentication; `BOB_SHELL_PATH` is optional and defaults to `bob` on `PATH`.
+Uses IBM Bob as the backend RCA LLM. `LLM_MODEL_NAME` is optional and defaults to `bob`. `LLM_API_KEY` is required when Bob is configured with API key authentication; `BOB_SHELL_PATH` is optional and defaults to `bob` on `PATH`.
 
 ### Step 1 — Configure `llm.env`
 

@@ -213,7 +213,7 @@ create_llm_secrets() {
 #     auth_config: { authType: API_KEY, apiKey: <LLM_API_KEY> }
 #
 #   bob  (→ provider path: BOB):
-#     is_active=true,
+#     models (defaults to ["bob"]), is_active=true,
 #     auth_config: { authType: API_KEY, apiKey: <LLM_API_KEY> }    (when set)
 #     additional_config: { bobShellPath: <BOB_SHELL_PATH> }         (when set)
 #
